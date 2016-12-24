@@ -61,8 +61,21 @@
       meteormethod="submitBig5Scale"}}
 
     <!--   {{> myScore}} -->
-   
+   <hr>
+   {{#each big5s}}
+      {{> showResult}}
+   {{/each}}
+
 </template>
+
+
+<template name="showResult">
+      <h2>{{_id}}</h2>
+      <h2>talkative: {{talkative}}</h2>
+      <h2>fault: {{fault}}</h2>
+      <hr>
+</template>
+
 
 
 <!-- <template name="Rsvp">
