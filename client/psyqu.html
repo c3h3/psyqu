@@ -1,0 +1,121 @@
+
+<head>
+   
+</head>
+<body>
+
+
+</body>
+
+<template name="main">
+  <h1>Found You</h1> 
+    <p>Choose who you need to find</p>
+     {{> navigation}}
+     {{> loginButtons}}
+
+    <p>Copyright &copy; Found You, 2016-2017.</p>
+</template>    
+ 
+
+<template name="navigation"> 
+    <ul>
+        <li><a href="{{pathFor route='friend'}}">A friend</a></li>
+        <li><a href="{{pathFor route='flatmate'}}">A flatmate</a></li>
+        <li><a href="{{pathFor route='partner'}}">A partner</a></li>
+    </ul>
+</template>
+
+<template name="flatmate">
+    <p>Find a flatmate!</p>
+</template>
+
+<template name="partner">
+    <p>Find a partner!</p>
+</template>
+
+<!--the friend page -->
+<template name="friend">
+    <h1>Find a friend!</h1>
+      <p> You need to fill in the scales below. You may play with any 
+      scale. <br/> The more scales you finish, the more accurate the result will be.
+      </p>
+
+      {{> friendNavi}}
+
+</template> 
+     
+<template name="friendNavi">
+        <ul>
+          <li><a href="{{pathFor route='personality'}}"> What's your personality? </a></li>
+          <li><a href="{{pathFor route='disclosure'}}"> Do you like to open up yourself? </a></li>
+          <li><a href="{{pathFor route='interests'}}">What are your interests? </a></li>
+        </ul>
+</template>
+
+<!-- personality survey -->
+<template name="personality">
+<h1>I see myself as someone who...</h1>
+
+    <!-- {{> quickForm collection="Big5" doc=this id="insertPersonality" type="method" meteormethod = "submitBig5"}} -->
+
+     {{> quickForm 
+      collection="Big5"
+      id="insertPersonality"
+      type="method"
+      meteormethod="submitBig5Scale"}}
+
+    <!--   {{> myScore}} -->
+   
+</template>
+
+
+<!-- <template name="Rsvp">
+  
+  {{#if isSuccessfulRsvp }}
+    
+    
+    {{else}}
+
+       
+
+      {{> quickForm 
+      collection="Big5"
+      id="insertPersonality"
+      type="method"
+      meteormethod="submitBig5Scale"
+      
+      }}
+      
+  {{/if}}
+</template>
+ -->
+<template name = "myScore">
+  <input type = "button" value = "SeeMyProfile"/>   
+
+
+</template>
+
+
+<!-- self-disclosure -->
+<template name="disclosure">
+  <h1>Do you like to open up yourself?</h1>
+</template>
+
+<template name="interests">
+  <h1>What are your interests?</h1>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
