@@ -73,11 +73,16 @@
       <h2>{{>uid2email uid=userId}}</h2>
       <h2>talkative: {{talkative}}</h2>
       <h2>fault: {{fault}}</h2>
+      <h2>new score: {{>newScore x=talkative y=fault}}</h2>
       <hr>
 </template>
 
 <template name="uid2email">
   {{email uid}}
+</template>
+
+<template name="newScore">
+  {{add x y}}
 </template>
 
 

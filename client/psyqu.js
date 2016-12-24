@@ -114,5 +114,10 @@ Template.uid2email.helpers({
 
 
 
+Template.newScore.helpers({
+  add: function(x,y){
+    return x+y
+  }
+})
 
 
