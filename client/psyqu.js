@@ -123,14 +123,6 @@ Big5.allow({
   }
 });
 
-//I print out the client side method on the console
-Meteor.methods({
-		'submitBig5Scale': function (big5) {
-		console.log('new BIG5:', big5);
-			Big5.insert(big5);
-		}
-	});
-
 
 // Template.myScore.events({
 
