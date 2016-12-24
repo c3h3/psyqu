@@ -106,6 +106,11 @@ Template.personality.helpers({
   big5s: Big5.find()
 })
 
+Template.uid2email.helpers({
+  email: function(uid){
+    return Meteor.users.findOne({_id:uid}).emails[0].address
+  }
+})
 
 
 
